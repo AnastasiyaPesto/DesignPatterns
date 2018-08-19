@@ -4,34 +4,17 @@ public class Application {
     public static void main(String[] args) {
 
         Duck duckMallar = new MallardDuck();
-        Duck duckRedHead = new RedHeadDuck();
-        Duck duckRubber = new RubberDuck();
-        Duck duckDecoy = new DecoyDuck();
 
-        duckMallar.quack();
-        duckMallar.swim();
-        duckMallar.display();
-        duckMallar.fly();
+        duckMallar.performFly();
+        duckMallar.performQuack();
 
-        System.out.print("\n");
+        System.out.println("\n");
 
-        duckRedHead.quack();
-        duckRedHead.swim();
-        duckRedHead.display();
-        duckRedHead.fly();
+        Duck model = new ModelDuck();
+        model.performFly();
+        model.setFlyBehavior(new FlyRocketPowered());
+        model.performFly();
 
-        System.out.print("\n");
 
-        duckRubber.quack();
-        duckRubber.swim();
-        duckRubber.display();
-        duckRubber.fly();
-
-        System.out.print("\n");
-
-        duckDecoy.quack();
-        duckDecoy.swim();
-        duckDecoy.display();
-        duckDecoy.fly();
     }
 }
